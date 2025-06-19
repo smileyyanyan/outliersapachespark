@@ -1,4 +1,4 @@
-projectid,name,status_indicator,percent_complete,project_duration_days,days_elapsed,labor_etcsum,labor_eacsum,labor_basesum,teamcount,taskcount
+projectid,name,project_status,percent_complete,project_duration_days,days_elapsed,labor_estimated,labor_actual,labor_basesum,teamcount,taskcount
 5115119,Infrastructure Deployment Template,1,0,34,34,2822400,2822400,2822400,4,7
 5117163,ProjectTemplate,0,0,364,111,3222400,3222400,3222400,6,11
 5117220,Playbook Project,0,0,364,123,3622400,3622400,3622400,7,15

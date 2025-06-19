@@ -27,13 +27,13 @@ public class SparkOutliersApplication
 {
   private static final String project_id_column_name = "projectid";
   private static final String project_name_column_name = "name";
-  private static final String status_indicator_column_name = "status_indicator";
+  private static final String status_indicator_column_name = "project_status";
   private static final String percent_complete_column_name = "percent_complete";
   private static final String project_duration_days_column_name = "project_duration_days";
-  private static final String labor_eacsum_column_name = "labor_eacsum";
+  private static final String labor_actual_column_name = "labor_actual";
   private static final String days_elapsed_column_name = "days_elapsed";
   private static final String labor_basesum_column_name = "labor_basesum";
-  private static final String labor_etcsum_column_name = "labor_etcsum";
+  private static final String labor_estimated_column_name = "labor_estimated";
   private static final String team_count_column_name = "teamcount";
   private static final String task_count_column_name = "taskcount";
   
@@ -74,10 +74,10 @@ public class SparkOutliersApplication
     StructField structFieldStatus = new StructField(status_indicator_column_name, DataTypes.IntegerType, false, Metadata.empty());
     StructField structFieldPercentComplete = new StructField(percent_complete_column_name, DataTypes.DoubleType, false, Metadata.empty());
     StructField structFieldProjectDurationDays = new StructField(project_duration_days_column_name, DataTypes.IntegerType, false, Metadata.empty());
-    StructField structField_labor_eacsum = new StructField(labor_eacsum_column_name, DataTypes.DoubleType, false, Metadata.empty());
+    StructField structField_labor_eacsum = new StructField(labor_actual_column_name, DataTypes.DoubleType, false, Metadata.empty());
     StructField structField_Days_elapsed = new StructField(days_elapsed_column_name, DataTypes.DoubleType, false, Metadata.empty());
     StructField structField_labor_basesum = new StructField(labor_basesum_column_name, DataTypes.DoubleType, false, Metadata.empty());
-    StructField structField_labor_etcsum = new StructField(labor_etcsum_column_name, DataTypes.DoubleType, false, Metadata.empty());
+    StructField structField_labor_etcsum = new StructField(labor_estimated_column_name, DataTypes.DoubleType, false, Metadata.empty());
     StructField structField_team_count = new StructField(team_count_column_name, DataTypes.IntegerType, false, Metadata.empty());
     StructField structField_task_count = new StructField(task_count_column_name, DataTypes.IntegerType, false, Metadata.empty());
     
@@ -130,8 +130,8 @@ public class SparkOutliersApplication
                                     percent_complete_column_name, 
                                     project_duration_days_column_name, 
                                     days_elapsed_column_name, 
-                                    labor_etcsum_column_name, 
-                                    labor_eacsum_column_name, 
+                                    labor_estimated_column_name, 
+                                    labor_actual_column_name, 
                                     labor_basesum_column_name, 
                                     team_count_column_name, 
                                     task_count_column_name})
