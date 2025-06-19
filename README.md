@@ -17,8 +17,8 @@ This project calculates outliers from a list of project management data stored i
 
 ##### Java run configurations
 
---add-exports java.base/sun.nio.ch=ALL-UNNAMED
---add-exports java.base/java.nio.ch=ALL-UNNAMED
---add-opens=java.base/java.nio=ALL-UNNAMED
---add-opens=java.base/java.lang.invoke=ALL-UNNAMED
---add-opens=java.base/java.util=ALL-UNNAMED
+--add-exports java.base/sun.nio.ch=ALL-UNNAMED  
+--add-exports java.base/java.nio.ch=ALL-UNNAMED  
+--add-opens=java.base/java.nio=ALL-UNNAMED  
+--add-opens=java.base/java.lang.invoke=ALL-UNNAMED  
+--add-opens=java.base/java.util=ALL-UNNAMED  
