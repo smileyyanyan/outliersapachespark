@@ -26,7 +26,6 @@ import org.apache.spark.sql.types.StructType;
 public class SparkOutliersApplication
 {
   private static final String project_id_column_name = "projectid";
-  private static final String project_name_column_name = "name";
   private static final String status_indicator_column_name = "project_status";
   private static final String percent_complete_column_name = "percent_complete";
   private static final String project_duration_days_column_name = "project_duration_days";
@@ -70,7 +69,6 @@ public class SparkOutliersApplication
     // define an explicit schema for the csv to be read 
     //-------------------------------------------
     StructField structFieldProjectId = new StructField(project_id_column_name, DataTypes.IntegerType, false, Metadata.empty());
-    StructField structFieldProjectName = new StructField(project_name_column_name, DataTypes.StringType, false, Metadata.empty());
     StructField structFieldStatus = new StructField(status_indicator_column_name, DataTypes.IntegerType, false, Metadata.empty());
     StructField structFieldPercentComplete = new StructField(percent_complete_column_name, DataTypes.DoubleType, false, Metadata.empty());
     StructField structFieldProjectDurationDays = new StructField(project_duration_days_column_name, DataTypes.IntegerType, false, Metadata.empty());
@@ -83,7 +81,6 @@ public class SparkOutliersApplication
     
     StructField[] csvSchemafields = new StructField[] {
         structFieldProjectId,
-        structFieldProjectName,
         structFieldStatus,
         structFieldPercentComplete,
         structFieldProjectDurationDays,
@@ -267,7 +264,7 @@ public class SparkOutliersApplication
     System.out.println("--------------------");
     
     projectOutliers.foreach((ForeachFunction<Row>) row -> {
-      System.out.println("Project id = " + row.getAs(project_id_column_name) + " name = " + row.getAs( "name" ));
+      System.out.println(row);
     });
     
     //-------------------------------------------
