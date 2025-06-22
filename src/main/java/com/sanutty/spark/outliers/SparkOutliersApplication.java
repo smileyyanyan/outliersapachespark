@@ -110,7 +110,7 @@ public class SparkOutliersApplication
       System.out.println(row);
     });
     
-    //projectid,name,status_indicator,percent_complete,project_duration_days,days_elapsed,labor_etcsum,labor_eacsum,labor_basesum,teamcount,taskcount
+    //projectid,status_indicator,percent_complete,project_duration_days,days_elapsed,labor_etcsum,labor_eacsum,labor_basesum,teamcount,taskcount
     System.out.println("--------------------");
     System.out.println("Project from db schema");
     System.out.println("--------------------");
